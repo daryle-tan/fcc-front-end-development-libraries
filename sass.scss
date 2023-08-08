@@ -1,0 +1,40 @@
+<style type='text/scss'>
+@mixin border-stroke($val) {
+  @if $val == light {
+    border: 1px solid black;
+  }
+  @else if $val == medium {
+    border: 3px solid black;
+  }
+  @else if $val == heavy {
+    border: 6px solid black;
+  }
+  @else {
+    border: none;
+  }
+}
+
+/* @for directive adds styles in a loop, very similar to a for loop in JavaScript. */
+<style type='text/scss'>
+@for $j from 1 to 6 {
+  .text-#{$j} { font-size: 15px * $j; }
+}
+
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
+
+  #box {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    @include border-stroke(medium);
+  }
+</style>
+
+<div id="box"></div>
