@@ -1,3 +1,4 @@
+/* @if, @else if, @else */
 <style type='text/scss'>
 @mixin border-stroke($val) {
   @if $val == light {
@@ -38,3 +39,71 @@
 </style>
 
 <div id="box"></div>
+
+/* @each directive which loops over each item in a list or map. On each iteration, the variable gets assigned to the current value from the list or map. */
+<style type='text/scss'>
+$colors: (color1: blue, color2: black, color3: red);
+
+@each $key, $color in $colors {
+  .#{$color}-bg {background-color: $color;}
+}
+
+
+  div {
+    height: 200px;
+    width: 200px;
+  }
+</style>
+
+<div class="blue-bg"></div>
+<div class="black-bg"></div>
+<div class="red-bg"></div>
+
+/* The @while directive is an option with similar functionality to the JavaScript while loop. It creates CSS rules until a condition is met. */
+<style type='text/scss'>
+$x: 1;
+@while $x < 6 {
+  .text-#{$x} { font-size: 15px * $x;}
+  $x: $x + 1;
+}
+
+
+</style>
+
+<p class="text-1">Hello</p>
+<p class="text-2">Hello</p>
+<p class="text-3">Hello</p>
+<p class="text-4">Hello</p>
+<p class="text-5">Hello</p>
+
+// Partials in Sass are separate files that hold segments of CSS code. These are imported and used in other Sass files. This is a great way to group similar code into a module to keep it organized.
+// Names for partials start with the underscore (_) character, which tells Sass it is a small segment of CSS and not to convert it into a CSS file. Also, Sass files end with the .scss file extension. To bring the code in the partial into another Sass file, use the @import directive.
+// For example, if all your mixins are saved in a partial named "_mixins.scss", and they are needed in the "main.scss" file, this is how to use them in the main file:
+@import 'variables'
+
+// Sass has a feature called extend that makes it easy to borrow the CSS rules from one element and build upon them in another.
+<style type='text/scss'>
+  h3{
+    text-align: center;
+  }
+  .info{
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+  }
+  .info-important{
+    @extend .info;
+    background-color:magenta;
+  }
+
+
+
+</style>
+<h3>Posts</h3>
+<div class="info-important">
+  <p>This is an important post. It should extend the class ".info" and have its own CSS styles.</p>
+</div>
+
+<div class="info">
+  <p>This is a simple post. It has basic styling and can be extended for other uses.</p>
+</div>
