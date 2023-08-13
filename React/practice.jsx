@@ -10,7 +10,7 @@
 //   </div>
 // )
 
-const JSX = (
+/* const JSX = (
   <div className="myDiv">
     <h1>Hello World</h1>
     <p>Lets render this to the DOM</p>
@@ -18,4 +18,14 @@ const JSX = (
 )
 // Add your code below this line
 const node = document.getElementById("challenge-node")
-ReactDOM.render(JSX, node)
+ReactDOM.render(JSX, node) */
+
+/* self closing tag  
+const JSX = (
+  <div>
+    <h2>Welcome to React!</h2> <br />
+    <p>Be sure to close all tags!</p>
+    <hr />
+  </div>
+);
+*/
