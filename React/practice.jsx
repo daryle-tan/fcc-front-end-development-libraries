@@ -29,3 +29,13 @@ const JSX = (
   </div>
 );
 */
+
+/* return a single div with string text 
+const MyComponent = function() {
+  // Change code below this line
+return (
+  <div>Hello</div>
+)
+  // Change code above this line
+}
+*/
