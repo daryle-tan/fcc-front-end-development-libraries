@@ -349,3 +349,21 @@ class Camper extends React.Component {
 Camper.defaultProps = { name: 'CamperBot' }
 Camper.propTypes = {name: PropTypes.string.isRequired}
 */
+
+/* declaring state
+class StatefulComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+       firstName: "Shirley"
+    }
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.state.firstName}</h1>
+      </div>
+    );
+  }
+};
+*/
