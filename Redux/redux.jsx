@@ -8,3 +8,11 @@
 // Define the store here:
 const store = Redux.createStore(reducer)
  */
+/** Get state from Redux store
+ * onst store = Redux.createStore(
+  (state = 5) => state
+);
+
+// Change code below this line
+const currentState = store.getState()
+ */
