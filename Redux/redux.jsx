@@ -16,3 +16,8 @@ const store = Redux.createStore(reducer)
 // Change code below this line
 const currentState = store.getState()
  */
+/** Define a redux action
+ * const action = {
+  type: 'LOGIN'
+}
+ */
