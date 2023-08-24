@@ -20,4 +20,11 @@ const currentState = store.getState()
  * const action = {
   type: 'LOGIN'
 }
+// Action creator
+const action = {
+  type: 'LOGIN'
+}
+function actionCreator() {
+  return action;
+}
  */
