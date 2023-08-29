@@ -356,6 +356,7 @@ const addToDo = (todo) => {
 }
 
 const store = Redux.createStore(immutableReducer);
+
 // Remove an Item from an Array
 const immutableReducer = (state = [0,1,2,3,4,5], action) => {
   switch(action.type) {
@@ -376,5 +377,29 @@ const removeItem = (index) => {
 
 const store = Redux.createStore(immutableReducer);
 
-// 
+// Copy an Object with Object.assign()
+const defaultState = {
+  user: 'CamperBot',
+  status: 'offline',
+  friends: '732,982',
+  community: 'freeCodeCamp'
+};
+
+const immutableReducer = (state = defaultState, action) => {
+  switch(action.type) {
+    case 'ONLINE':
+      // Don't mutate state here or the tests will fail
+      return Object.assign({}, state, {status: 'online'});
+    default:
+      return state;
+  }
+};
+
+const wakeUp = () => {
+  return {
+    type: 'ONLINE'
+  }
+};
+
+const store = Redux.createStore(immutableReducer);
  */
