@@ -176,4 +176,21 @@ const mapStateToProps = (state) => {
 }
 
 // 6/11
+const addMessage = (message) => {
+  return {
+    type: 'ADD',
+    message: message
+  }
+};
+
+const mapDispatchToProps = (dispatch, message) => {
+  return {
+    submitNewMessage: function(message) {
+      dispatch(addMessage(message)) 
+    }
+  }
+}
+
+// 7/10
+
  */
